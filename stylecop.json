@@ -1,0 +1,24 @@
+﻿{
+  // ACTION REQUIRED: This file was automatically added to your project, but it
+  // will not take effect until additional steps are taken to enable it. See the
+  // following page for additional information:
+  //
+  // https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/EnableConfiguration.md
+
+  "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+  "settings": {
+    "documentationRules": {
+      "companyName": "Modular Bitcoin Cash",
+      "copyrightText": "Copyright (c) 2018-2018 {companyName} developers.\nDistributed under the {licenseName} software license, see the accompanying {licenseFile} file in the project root\nor {licenseUrl} for full license information.",
+      "variables": {
+        "licenseName": "MIT",
+        "licenseFile": "LICENSE",
+        "licenseUrl": "http://www.opensource.org/licenses/mit-license.php"
+      },
+      "documentInterfaces": true,
+      "documentInternalElements": true,
+      "documentPrivateElements": true,
+      "documentPrivateFields": true
+    }
+  }
+}

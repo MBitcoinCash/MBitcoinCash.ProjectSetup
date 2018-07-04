@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.0</TargetFrameworks>
+    <NoBuild>true</NoBuild>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <!-- Suppresses the warnings about the package not having assemblies in lib/*/.dll.-->
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <Company>Modular Bitcoin Cash</Company>
+    <Authors>Modular Bitcoin Cash Developers</Authors>
+    <Description>Common project configuration settings used in all MBitcoinCash projects.</Description>
+    <PackageLicenseUrl>http://www.opensource.org/licenses/mit-license.php</PackageLicenseUrl>
+    <Copyright>Copyright (c) 2018-2018 Modular Bitcoin Cash developers</Copyright>
+    <RepositoryUrl>https://github.com/MBitcoinCash/MBitcoinCash.StyleCop</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/MBitcoinCash/MBitcoinCash.StyleCop</PackageProjectUrl>
+    <PackageReleaseNotes>First release.</PackageReleaseNotes>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- pack the props files -->
+    <Content Include="MBitcoinCash.StyleCop.props" PackagePath="build\" />
+    <Content Include="MBitcoinCash.StyleCop.props" PackagePath="buildMultiTargeting\" />
+    <Content Include="stylecop.json" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta004" />
+    <PackageReference Update="NETStandard.Library" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
