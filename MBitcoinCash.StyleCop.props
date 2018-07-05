@@ -5,6 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="stylecop.json" />
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)\..\config\stylecop.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Link>stylecop.json</Link>
+    </AdditionalFiles>
   </ItemGroup>
 </Project>

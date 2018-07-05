@@ -13,9 +13,11 @@
     <Copyright>Copyright (c) 2018-2018 Modular Bitcoin Cash developers</Copyright>
     <RepositoryUrl>https://github.com/MBitcoinCash/MBitcoinCash.StyleCop</RepositoryUrl>
     <PackageProjectUrl>https://github.com/MBitcoinCash/MBitcoinCash.StyleCop</PackageProjectUrl>
-    <PackageReleaseNotes>Moving stylecop.json to content folder</PackageReleaseNotes>
+    <PackageReleaseNotes>Fixing stylecop.json inclusion in the project</PackageReleaseNotes>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>1.0.1</Version>
+    <Version>1.0.4</Version>
+    <AssemblyVersion>1.0.4.0</AssemblyVersion>
+    <FileVersion>1.0.4.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,7 +28,8 @@
     <!-- pack the props files -->
     <Content Include="MBitcoinCash.StyleCop.props" PackagePath="build\" />
     <Content Include="MBitcoinCash.StyleCop.props" PackagePath="buildMultiTargeting\" />
-    <Content Include="stylecop.json" PackagePath="content\" />
+    <Content Include="stylecop.json" PackagePath="config\" />
+
   </ItemGroup>
 
   <ItemGroup>
