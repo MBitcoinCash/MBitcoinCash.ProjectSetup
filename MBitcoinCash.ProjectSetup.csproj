@@ -13,7 +13,7 @@
     <Copyright>Copyright (c) 2018-2018 Modular Bitcoin Cash developers</Copyright>
     <RepositoryUrl>https://github.com/MBitcoinCash/MBitcoinCash.ProjectSetup</RepositoryUrl>
     <PackageProjectUrl>https://github.com/MBitcoinCash/MBitcoinCash.ProjectSetup</PackageProjectUrl>
-    <PackageReleaseNotes>Fixing stylecop.json inclusion in the project</PackageReleaseNotes>
+    <PackageReleaseNotes>Rebranding to MBitcoinCash.ProjectSetup and adding FxCop analyzers.</PackageReleaseNotes>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Version>1.0.0</Version>
   </PropertyGroup>
