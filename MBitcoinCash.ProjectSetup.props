@@ -1,0 +1,32 @@
+<Project>
+  <PropertyGroup>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)\..\config\CodeAnalysisRuleSet.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)\..\config">
+      <Link>ProjectSetupConfig\</Link>
+    </Folder>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\..\config\AssemblyInfo.cs">
+      <Link>ProjectSetupConfig\AssemblyInfo.cs</Link>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)\..\config\CodeAnalysisRuleSet.ruleset">
+      <Link>ProjectSetupConfig\CodeAnalysisRuleSet.ruleset</Link>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)\..\config\stylecop.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Link>ProjectSetupConfig\stylecop.json</Link>
+    </AdditionalFiles>
+  </ItemGroup>
+</Project>

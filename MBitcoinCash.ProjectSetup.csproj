@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netstandard1.0</TargetFrameworks>
@@ -11,28 +11,32 @@
     <Description>Common project configuration settings used in all MBitcoinCash projects.</Description>
     <PackageLicenseUrl>http://www.opensource.org/licenses/mit-license.php</PackageLicenseUrl>
     <Copyright>Copyright (c) 2018-2018 Modular Bitcoin Cash developers</Copyright>
-    <RepositoryUrl>https://github.com/MBitcoinCash/MBitcoinCash.StyleCop</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/MBitcoinCash/MBitcoinCash.StyleCop</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MBitcoinCash/MBitcoinCash.ProjectSetup</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/MBitcoinCash/MBitcoinCash.ProjectSetup</PackageProjectUrl>
     <PackageReleaseNotes>Fixing stylecop.json inclusion in the project</PackageReleaseNotes>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>1.0.4</Version>
-    <AssemblyVersion>1.0.4.0</AssemblyVersion>
-    <FileVersion>1.0.4.0</FileVersion>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="stylecop.json" />
+    <Compile Remove="AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
   </ItemGroup>
 
   <ItemGroup>
     <!-- pack the props files -->
-    <Content Include="MBitcoinCash.StyleCop.props" PackagePath="build\" />
-    <Content Include="MBitcoinCash.StyleCop.props" PackagePath="buildMultiTargeting\" />
+    <Content Include="MBitcoinCash.ProjectSetup.props" PackagePath="build\" />
+    <!--<Content Include="MBitcoinCash.StyleCop.props" PackagePath="buildMultiTargeting\" />-->
     <Content Include="stylecop.json" PackagePath="config\" />
-
+    <Content Include="CodeAnalysisRuleSet.ruleset" PackagePath="config\" />
+    <Content Include="AssemblyInfo.cs" PackagePath="config\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.1" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta004" />
     <PackageReference Update="NETStandard.Library" PrivateAssets="All" />
   </ItemGroup>
